@@ -1,0 +1,10 @@
+[Unit]
+Description=Testing systemd timers
+Requires=timer1.service
+
+[Timer]
+Unit=timer1.service
+OnCalendar=*-*-* *:*:00
+
+[Install]
+WantedBy=timers.target 

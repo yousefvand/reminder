@@ -1,0 +1,15 @@
+systemctl --user list-timers
+systemctl --user enable timer1.service
+systemctl --user start timer1.service
+systemctl --user status timer1.service
+journalctl -S today -u timer1.service
+journalctl --user -S today -u timer1.service
+systemctl --user enable timer1.timer
+systemctl --user start timer1.timer
+systemctl --user reload timer1.service
+systemctl --user restart timer1.service
+systemctl --user daemon-reload
+journalctl --user -S today -f -u timer1.service
+
+service files path: /home/me/.config/systemd/user/
+

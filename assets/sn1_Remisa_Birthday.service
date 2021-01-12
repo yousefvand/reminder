@@ -1,0 +1,8 @@
+[Unit]
+Description=Testing systemd timers
+
+[Service]
+ExecStart=notify-send -u normal -t 10000 -a "System" -i flag-yellow "Battery Health" "Battery should be replaced"
+
+[Install]
+WantedBy=default.target

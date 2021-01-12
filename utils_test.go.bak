@@ -1,0 +1,63 @@
+package main
+
+import (
+	"fmt"
+	"testing"
+)
+
+/*
+// ConvertCalendarToInt : Cast year, month, day from string to int
+func TestConvertCalendarToInt(t *testing.T) {
+	var tests = []struct {
+		y, m, d             string
+		wantY, wantM, wantD int
+	}{
+		{"1372", "8", "11", 1372, 8, 11},
+		{"1355", "2", "28", 1355, 2, 28},
+		{"1395", "12", "30", 1395, 12, 30},
+	}
+	for _, tt := range tests {
+		testname := fmt.Sprintf("%s-%s-%s", tt.y, tt.m, tt.d)
+		t.Run(testname, func(t *testing.T) {
+			ansY, ansM, ansD := ConvertCalendarToInt(tt.y, tt.m, tt.d)
+			if ansY != tt.wantY {
+				t.Errorf("got %d, want %d", ansY, tt.wantY)
+			}
+			if ansM != tt.wantM {
+				t.Errorf("got %d, want %d", ansM, tt.wantM)
+			}
+			if ansD != tt.wantD {
+				t.Errorf("got %d, want %d", ansD, tt.wantD)
+			}
+		})
+	}
+}
+*/
+
+// ConvertCalendarToString : Cast year, month, day from int to string
+func TestConvertCalendarToString(t *testing.T) {
+	var tests = []struct {
+		y, m, d             int
+		wantY, wantM, wantD string
+	}{
+		{1372, 8, 11, "1372", "8", "11"},
+		{1355, 2, 28, "1355", "2", "28"},
+		{1395, 12, 30, "1395", "12", "30"},
+	}
+
+	for _, tt := range tests {
+		testname := fmt.Sprintf("%d-%d-%d", tt.y, tt.m, tt.d)
+		t.Run(testname, func(t *testing.T) {
+			ansY, ansM, ansD := ConvertCalendarToString(tt.y, tt.m, tt.d)
+			if ansY != tt.wantY {
+				t.Errorf("got %s, want %s", ansY, tt.wantY)
+			}
+			if ansM != tt.wantM {
+				t.Errorf("got %s, want %s", ansM, tt.wantM)
+			}
+			if ansD != tt.wantD {
+				t.Errorf("got %s, want %s", ansD, tt.wantD)
+			}
+		})
+	}
+}

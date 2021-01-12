@@ -1,0 +1,5 @@
+Name,type,date,calendar,duration (seconds),every “n” hour,icon,comment
+Remisa,Birthday,1372/8/11,Jalali,10,8,flag-yellow,something
+Masoud,Birthday,1355/2/28,Jalali,20,6,flag-yellow,45 yrs old
+Marriage,Aniversarry,2021-01-10,Gregorian,5,4,flag-yellow,buy something
+nb,test,1399/10/23,Jalali,30,1,flag-yellow,works!

@@ -1,0 +1,10 @@
+[Unit]
+Description=Testing systemd timers
+Requires=sn1_Remisa_Birthday.service
+
+[Timer]
+Unit=sn1_Remisa_Birthday.service
+OnCalendar=*-*-* *:*:00
+
+[Install]
+WantedBy=timers.target 
